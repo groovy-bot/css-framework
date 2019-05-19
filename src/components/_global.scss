@@ -1,0 +1,80 @@
+// Global Values
+
+:root {
+  // Color
+  @each $color_name, $color in $colors {
+    @each $color_type, $color_value in $color {
+      @if $color_type == "base" {
+        --#{$color_name}: #{$color_value};
+      } @else {
+        --#{$color_name}-#{$color_type}: #{$color_value};
+      }
+    }
+  }
+
+  // Shade
+  @each $shade, $shade_value in $shades {
+    --#{$shade}: #{$shade_value};
+  }
+
+  // Radius
+  @each $radius, $radius_value in $radius {
+    --radius-#{$radius}: #{$radius_value};
+  }
+
+  // Shadow
+  @each $shadow, $shadow_value in $shadow {
+    --shadow-#{$shadow}: #{$shadow_value};
+  }
+
+  // Transition
+  @each $transition, $transition_value in $transition {
+    --transition-#{$transition}: #{$transition_value};
+  }
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  background: color("grey", "base");
+  font-family: 'Roboto', sans-serif;
+  color: shade("white");
+}
+
+p {
+  color: shade("white");
+  font-size: 20px;
+}
+
+a {
+  color: shade("white");
+  font-size: 20px;
+  text-decoration: none;
+  transition: $transition-base;
+}
+
+a:hover {
+  opacity: 1;
+}
+
+h1 {
+  font-size: 50px;
+  font-weight: 700;
+}
+
+img {
+  user-select: none;
+}
+
+#__nuxt {
+  height: 100%;
+}
+
+#__layout {
+  height: 100%;
+}
+
+#__wrapper {
+  height: 100%;
+}

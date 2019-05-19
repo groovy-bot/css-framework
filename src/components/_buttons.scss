@@ -1,0 +1,52 @@
+// Buttons
+
+.btn {
+  border-radius: $radius-small;
+  box-shadow: $shadow-all;
+  text-align: center;
+  text-decoration: none;
+  color: shade("white");
+  background: color("purple", "average");
+  cursor: pointer;
+}
+
+.btn.animated {
+  transition: $transition-base;
+  
+  &:hover {
+    transform: translateY(1px);
+    box-shadow: $shadow-bottom;
+  }
+}
+
+.btn.rounded {
+  border-radius: $radius-big;
+}
+
+.btn.huge {
+  padding: 18px 35px;
+  font-weight: 700;
+  font-size: 20px;
+  min-width: 150px;
+}
+
+.btn.big {
+  padding: 14px 22px;
+  font-weight: 700;
+  font-size: 17px;
+  min-width: 100px;
+}
+
+.btn.medium {
+  padding: 10px 16px;
+  font-weight: 500;
+  font-size: 15px;
+  min-width: 75px;
+}
+
+.btn.small {
+  padding: 6px 12px;
+  font-weight: 300;
+  font-size: 12px;
+  min-width: 50px;
+}

@@ -1,0 +1,86 @@
+// Colors
+
+$purple: (
+  "base": #b05cd6,
+  "dark": #492991,
+  "light": #ff8af9,
+  "average": #d870e8
+);
+
+$blue: (
+  "base": #78a4fa
+);
+
+$grey: (
+  "base": #36393f,
+  "dark": #2a2c30,
+  "darker": #202024,
+  "light": #727375,
+  "lighter": #afafaf
+);
+
+$shades: (
+  "black": #000000,
+  "white": #ffffff,
+  "transparent": transparent
+);
+
+$colors: (
+  "purple": $purple,
+  "blue": $blue,
+  "grey": $grey
+);
+
+// Usage: color("name_of_color", "type_of_color")
+@function color($color, $type) {
+  @if map-has-key($colors, $color) {
+    $current: map-get($colors, $color);
+    @if map-has-key($current, $type) {
+      @return map-get($current, $type);
+    }
+  }
+
+  @warn "Unknown `#{$color}` - `#{$type}` in $colors.";
+  @return null;
+}
+
+// Usage: shade("name_of_shade")
+@function shade($type) {
+  @if map-has-key($shades, $type) {
+    @return map-get($shades, $type);
+  }
+
+  @warn "Unknown `#{$type}` in $shades.";
+  @return null;
+}
+
+// Color Classes
+@each $color_name, $color in $colors {
+  @each $color_type, $color_value in $color {
+    @if $color_type == "base" {
+      .#{$color_name} {
+        background-color: $color_value !important;
+      }
+      .#{$color_name}-text {
+        color: $color_value !important;
+      }
+    } @else {
+      .#{$color_name}-#{$color_type} {
+        background-color: $color_value !important;
+      }
+      .#{$color_name}-#{$color_type}-text {
+        color: $color_value !important;
+      }
+    }
+  }
+}
+
+// Shade classes
+@each $shade, $shade_value in $shades {
+  .#{$shade} {
+    background-color: $shade_value !important;
+  }
+  .#{$shade}-text {
+    color: $shade_value !important;
+  }
+}
