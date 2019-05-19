@@ -1,5 +1,5 @@
 {
-  "name": "groovy-css-framework",
+  "name": "@groovy/css-framework",
   "version": "0.1.0",
   "description": "A CSS-Framework for Groovy's web-presence",
   "main": "index.js",
@@ -7,6 +7,5 @@
     "test": "echo \"TODO: Set up webserver with docs\" && exit 1",
     "build": "sass src/main.scss build/framework.css"
   },
-  "author": "Rxsto <oz@farfrom.social> (https://rxsto.me)",
-  "license": "MIT"
+  "author": "Rxsto <oz@farfrom.social> (https://rxsto.me)"
 }
