@@ -37,6 +37,7 @@ html,
 body {
   height: 100%;
   width: 100%;
+  position: relative;
   background: color("grey", "base");
   font-family: 'Roboto', sans-serif;
   color: shade("white");
@@ -68,13 +69,16 @@ img {
 }
 
 #__nuxt {
-  height: 100%;
+  min-height: 100%;
+  position: relative;
 }
 
 #__layout {
-  height: 100%;
+  min-height: 100%;
+  position: relative;
 }
 
 #__wrapper {
-  height: 100%;
+  min-height: 100%;
+  position: relative;
 }
