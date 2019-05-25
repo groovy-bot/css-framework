@@ -2,7 +2,7 @@
 
 .btn {
   border-radius: $radius-small;
-  box-shadow: $shadow-all;
+  box-shadow: $shadow-bottom;
   text-align: center;
   text-decoration: none;
   color: shade("white");
@@ -14,8 +14,13 @@
   transition: $transition-base;
   
   &:hover {
+    transform: translateY(-1px);
+    box-shadow: $shadow-all;
+  }
+
+  &:active {
     transform: translateY(1px);
-    box-shadow: $shadow-bottom;
+    box-shadow: none;
   }
 }
 
