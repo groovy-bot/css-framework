@@ -41,6 +41,7 @@ body {
   background: color("grey", "base");
   font-family: 'Roboto', sans-serif;
   color: shade("white");
+  overflow-x: hidden;
 }
 
 p {
