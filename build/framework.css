@@ -638,6 +638,7 @@ img {
   color: #ffffff;
   background: #d870e8;
   cursor: pointer;
+  user-select: none;
 }
 
 .btn.animated {
