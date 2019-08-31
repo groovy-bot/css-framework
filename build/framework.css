@@ -595,8 +595,8 @@ table {
 
 html,
 body {
-  height: 100%;
-  width: 100%;
+  min-height: 100vh;
+  min-width: 100vw;
   position: relative;
   background: #36393f;
   font-family: "Roboto", sans-serif;
