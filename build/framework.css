@@ -599,7 +599,7 @@ body {
   width: 100%;
   position: relative;
   background: #36393f;
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto", "Arial", sans-serif;
   color: #ffffff;
   overflow-x: hidden;
   scroll-behavior: smooth;
