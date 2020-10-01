@@ -33,3 +33,9 @@ div {
 .btn {
   margin: 5px;
 }
+
+.inner {
+  position: relative;
+  width: auto;
+  max-width: none;
+}

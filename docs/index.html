@@ -7,6 +7,7 @@
   <body>
     <main>
       <h1>Groovy CSS-Framework Documentation</h1>
+      <p>Deprecation warning! This project will be deprecated in favor of moving on to version 4! It will be archived and no longer updated! Upcoming changes involve tailwindcss!</p>
       <section>
         <h2>Buttons</h2>
         <h3>Edged</h3>
@@ -23,7 +24,24 @@
           <a class="btn medium rounded purple">Medium</a>
           <a class="btn small rounded purple">Small</a>
         </div>
-      </section>      
+        <h3>Animated</h3>
+        <div>
+          <a class="btn huge rounded blue animated">Huge</a>
+          <a class="btn big purple-light animated">Big</a>
+          <a class="btn medium rounded dark animated">Medium</a>
+          <a class="btn small grey-light animated">Small</a>
+        </div>
+      </section>
+      <section>
+        <h2>Tooltips</h2>
+        <div>
+          <span class="inner" tooltip="Tooltip">
+            <a>
+              Hover me!
+            </a>
+          </span>
+        </div>
+      </section>
     </main>
   </body>
 </html>
